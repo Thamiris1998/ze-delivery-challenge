@@ -1,10 +1,12 @@
 FROM adoptopenjdk/openjdk11:alpine-jre
+COPY --chown=gradle:gradle . /home/gradle/src
+WORKDIR /home/gradle/src
+RUN gradle build --no-daemon
 
-RUN addgroup -S zegroup && adduser -S zeuser -G zegroup
-USER zeuser:zegroup
+ENV JAR_NAME partner-*.jar
 
-WORKDIR /opt/app
-COPY target/ze-partner-*.jar app.jar
+RUN mkdir /app
+COPY --from=build /home/gradle/src/build/libs/*.jar /app/spring-boot-application.jar
 
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","app.jar"]

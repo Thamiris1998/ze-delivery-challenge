@@ -1,17 +1,24 @@
 package com.ze.partner.infrastructure.configuration
 
+import com.fasterxml.jackson.core.JsonGenerator
+import com.fasterxml.jackson.databind.SerializerProvider
 import com.ze.partner.infrastructure.provider.ObjectMapperProvider
 import io.swagger.v3.oas.models.OpenAPI
 import io.swagger.v3.oas.models.info.Info
 import io.swagger.v3.oas.models.info.License
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
+import org.springframework.data.mongodb.core.geo.GeoJsonMultiPolygon
+import java.io.IOException
 
 @Configuration
 class ApplicationBeans {
 
     @Bean
-    fun objectMapper() = ObjectMapperProvider.provide()
+    fun objectMapper() {
+       ObjectMapperProvider.provide()
+
+    }
 
     @Bean
     fun customOpenAPI(): OpenAPI {

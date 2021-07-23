@@ -18,7 +18,6 @@ val slf4jVersion by extra { "1.7.30" }
 val openApiVersion by extra { "1.2.32" }
 val testContainersVersion by extra { "1.15.3" }
 val jacksonVersion by extra { "2.12.1" }
-
 dependencies {
 	// DATABASE
 	implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
