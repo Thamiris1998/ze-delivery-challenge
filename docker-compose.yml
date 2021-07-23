@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  mongoDB:
+    image: mongo:3.6.18-xenial
+    ports:
+      - "27017:27017"
+  app:
+    build: .
+    environment:
+      - SPRING_DATA_MONGODB_URI=mongodb://db:27017/zepartner
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongoDB
