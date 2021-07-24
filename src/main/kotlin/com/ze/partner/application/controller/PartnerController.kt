@@ -5,9 +5,7 @@ import com.ze.partner.application.model.PartnerModel
 import com.ze.partner.application.service.PartnerService
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
-import org.springframework.http.HttpHeaders
 import org.springframework.http.ResponseEntity
-import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.*
 import javax.validation.Valid
 
@@ -20,7 +18,8 @@ class PartnerController (private val partnerService: PartnerService){
     @GetMapping("/{id}")
     fun findById(@PathVariable("id") id: String): ResponseEntity<Partner> {
         logger.info("Start FindById:$id")
-        return ResponseEntity.ok(partnerService.findById(id))
+        val partner = partnerService.findById(id)
+        return ResponseEntity.ok(partner)
     }
 
     @PostMapping

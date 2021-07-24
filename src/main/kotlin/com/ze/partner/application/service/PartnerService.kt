@@ -9,7 +9,7 @@ import java.util.UUID
 @Service
 class PartnerService(private val partnerRepository: PartnerRepository) {
 
-    fun findById(id: String): Partner? {
+    fun findById(id: String): Partner {
         return partnerRepository.findById(UUID.fromString(id))
     }
 

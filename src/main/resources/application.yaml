@@ -5,6 +5,10 @@ spring:
     name: app
   data:
     mongodb:
-      uri: mongodb://localhost:27017/zepartner
+      uri: mongodb://localhost:27017/partner
   datasource:
     driver-class-name: mongodb.jdbc.MongoDriver
+springdoc:
+  swagger-ui:
+    path: "/partner/swagger-ui.html"
+    operations-sorter: "method"
