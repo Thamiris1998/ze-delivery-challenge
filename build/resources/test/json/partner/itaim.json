@@ -1,0 +1,15 @@
+{
+  "tradingName": "Companhia Cervejaria Stellar - Consolação",
+  "ownerName": "Gabriela Gomes",
+  "document": "91.436.921/0001-57",
+  "coverageArea": {
+    "type": "MultiPolygon",
+    "coordinates": [
+      [[[-15, -30], [-18, -30], [-18, -45], [-15, -45],[-15,-30]]]
+    ]
+  },
+  "address": {
+    "type": "Point",
+    "coordinates": [-17, -38]
+  }
+}

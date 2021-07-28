@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
 	id("org.springframework.boot") version "2.4.2"
 	id("io.spring.dependency-management") version "1.0.11.RELEASE"
+	id("com.adarshr.test-logger") version "2.0.0"
 	kotlin("jvm") version "1.5.21"
 	kotlin("plugin.spring") version "1.5.21"
 }
@@ -37,6 +38,9 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.testcontainers:junit-jupiter")
 	testImplementation("org.testcontainers:mongodb")
+	testImplementation("org.testcontainers:testcontainers")
+	testImplementation("io.mockk:mockk:1.9.3")
+	implementation("com.github.javafaker:javafaker:1.0.2")
 
 	//SWAGGER
 	implementation("org.springdoc:springdoc-openapi-ui:$openApiVersion")
@@ -44,6 +48,9 @@ dependencies {
 	// JACKSON
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin:$jacksonVersion")
 	implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:$jacksonVersion")
+
+	implementation("br.com.caelum.stella:caelum-stella-core:2.1.3")
+
 
 	// LOGS
 	implementation("org.slf4j:slf4j-api:$slf4jVersion")
@@ -62,6 +69,18 @@ tasks.withType<KotlinCompile> {
 	}
 }
 
-tasks.withType<Test> {
-	useJUnitPlatform()
+tasks{
+
+	withType(Test::class.java) {
+		useJUnitPlatform()
+	}
+
+	testlogger {
+		showFullStackTraces = true
+		showSimpleNames = true
+		showStandardStreams = true
+		showPassedStandardStreams = false
+		showSkippedStandardStreams = true
+	}
+
 }

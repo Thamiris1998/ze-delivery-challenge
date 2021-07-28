@@ -4,13 +4,16 @@ import com.ze.partner.application.domain.Partner
 import com.ze.partner.application.model.PartnerModel
 import com.ze.partner.application.repository.PartnerRepository
 import org.springframework.stereotype.Service
-import java.util.UUID
 
 @Service
 class PartnerService(private val partnerRepository: PartnerRepository) {
 
+    fun findNearest(long: Double, lat: Double): Partner {
+        return partnerRepository.findNearest(long, lat)
+    }
+
     fun findById(id: String): Partner {
-        return partnerRepository.findById(UUID.fromString(id))
+        return partnerRepository.findById(id)
     }
 
     fun save(model: PartnerModel): Partner {
