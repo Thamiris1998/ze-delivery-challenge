@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ze.partner.aplication.service.PartnerServiceTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-07-28T18:29:54" hostname="dxtcps010263" time="0.304">
+  <properties/>
+  <testcase name="given a partner_id already exist then return throw PartnerAlreadyExistsException()" classname="com.ze.partner.aplication.service.PartnerServiceTest" time="0.257"/>
+  <testcase name="given incorrect partner_id then return throw PartnerNotFoundException()" classname="com.ze.partner.aplication.service.PartnerServiceTest" time="0.005"/>
+  <testcase name="given correct partner then partnerRepository_save() must be called once()" classname="com.ze.partner.aplication.service.PartnerServiceTest" time="0.022"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

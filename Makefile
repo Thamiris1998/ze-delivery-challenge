@@ -7,6 +7,5 @@ run:
 	./gradlew clean build -x test
 	docker-compose up -d --build
 test:
-	@$(MAKE) down
-	docker-compose up -d --build
+	@docker-compose down --v
 	./gradlew build

@@ -1,0 +1,15 @@
+{
+  "tradingName": "Companhia Cervejaria Brahma - Consolação",
+  "ownerName": "Thamiris Silva",
+  "document": "33.366.980/0062-11",
+  "coverageArea": {
+    "type": "MultiPolygon",
+    "coordinates": [
+      [[[15, 30], [18, 30], [18, 45], [15, 45],[15,30]]]
+    ]
+  },
+  "address": {
+    "type": "Point",
+    "coordinates": [17, 38]
+  }
+}
