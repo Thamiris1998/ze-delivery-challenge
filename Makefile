@@ -9,4 +9,4 @@ run:
 test:
 	@$(MAKE) down
 	docker-compose up -d --build
-	./gradlew test
+	./gradlew build

@@ -1,22 +1,39 @@
 # Zé Patner Challenge - Backend Software Engineer (Vaga afirmativa para Mulheres)
 
 ### Reference Documentation
-For further reference, please consider the following sections:
+What you’ll need:
 
-* [Official Gradle documentation](https://docs.gradle.org)
-* [Spring Boot Gradle Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.5.3/gradle-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.5.3/gradle-plugin/reference/html/#build-image)
-* [Testcontainers MongoDB Module Reference Guide](https://www.testcontainers.org/modules/databases/mongodb/)
-* [Spring Data MongoDB](https://docs.spring.io/spring-boot/docs/2.5.3/reference/htmlsingle/#boot-features-mongodb)
-* [Testcontainers](https://www.testcontainers.org/)
+* JDK 11 or later
+* Spring Boot
+* Gradle
+* Docker
+* Makefiles
 
 ### Guides
 The following guides illustrate how to use some features concretely:
 
-* [Accessing Data with MongoDB](https://spring.io/guides/gs/accessing-data-mongodb/)
+Method	| Path	| Description
+--- | --- | --- |
+GET	| /partner/nearest/long/{long}/lat/{lat}	| Get nearest partner between long and lat
+GET	| /{id}	| Get partner by ID
+POST	| /partner	| Create partner
 
-### Additional Links
-These additional references should also help you:
+### Commands
+To build and start the application and MongoDB, run:
+```shell
+make run
+```
+To run the integration and unit tests, run:
+```shell
+make test
+```
+To stop the application and MongoDB, run:
+```shell
+make down
+```
 
-* [Gradle Build Scans – insights for your project's build](https://scans.gradle.com#gradle)
+### Swagger
+You can also check the swagger page out in the url below:
+
+http://localhost:8081/partner/swagger-ui.html
 

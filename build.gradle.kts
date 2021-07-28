@@ -29,10 +29,10 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
-	///validator
+	///VALIDATOR
 	implementation("org.hibernate:hibernate-validator-annotation-processor:6.0.1.Final")
 	implementation("org.hibernate:hibernate-validator:6.0.1.Final")
-
+	implementation("br.com.caelum.stella:caelum-stella-core:2.1.3")
 
 	// TEST ENGINE
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
@@ -48,9 +48,6 @@ dependencies {
 	// JACKSON
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin:$jacksonVersion")
 	implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:$jacksonVersion")
-
-	implementation("br.com.caelum.stella:caelum-stella-core:2.1.3")
-
 
 	// LOGS
 	implementation("org.slf4j:slf4j-api:$slf4jVersion")

@@ -2,7 +2,7 @@ package com.ze.partner.aplication.controller
 
 import com.github.javafaker.Faker
 import com.jayway.jsonpath.JsonPath.read
-import com.ze.partner.infrastructure.provider.ObjectMapperProvider
+import com.ze.partner.infrastructure.provider.ObjectMapperProvider.readJsonResource
 import org.junit.jupiter.api.AfterAll
 import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.Test
@@ -28,10 +28,10 @@ class PartnerControllerTest {
     companion object {
         private val database = Container("mongo")
             .withFixedExposedPort(27017,27017)
-        val pinheirosJson = ObjectMapperProvider.readJsonResource("partner/pinheiros")
-        val consolacaoJson = ObjectMapperProvider.readJsonResource("partner/consolacao")
-        val itaimJson = ObjectMapperProvider.readJsonResource("partner/itaim")
-        val jardinsJson = ObjectMapperProvider.readJsonResource("partner/jardins")
+        val pinheirosJson = readJsonResource("partner/pinheiros")
+        val consolacaoJson = readJsonResource("partner/consolacao")
+        val itaimJson = readJsonResource("partner/itaim")
+        val jardinsJson = readJsonResource("partner/jardins")
 
         @BeforeAll
         @JvmStatic

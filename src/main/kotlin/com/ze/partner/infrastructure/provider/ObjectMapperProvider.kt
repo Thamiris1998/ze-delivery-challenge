@@ -11,7 +11,7 @@ import org.springframework.data.mongodb.core.geo.GeoJsonModule
 
 object ObjectMapperProvider {
     fun provide() = jacksonObjectMapper().apply {
-        propertyNamingStrategy = PropertyNamingStrategy.SNAKE_CASE
+        propertyNamingStrategy = PropertyNamingStrategy.LOWER_CAMEL_CASE
 
         setDefaultPrettyPrinter(
             DefaultPrettyPrinter().apply {

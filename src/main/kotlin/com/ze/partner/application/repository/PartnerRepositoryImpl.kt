@@ -27,7 +27,7 @@ class PartnerRepositoryImpl(private val mongoTemplate: MongoTemplate) : PartnerR
                 .where("address").nearSphere(Point(long, lat))
                 .and("coverageArea").intersects(GeoJsonPoint(long, lat)))
 
-        return mongoTemplate.findOne(query, Partner::class.java) ?: throw PartnerNotFoundException("")
+        return mongoTemplate.findOne(query, Partner::class.java) ?: throw PartnerNotFoundException("nearest")
     }
 
     override fun alreadyExistsDocument(document: String): Boolean {

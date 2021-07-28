@@ -15,7 +15,6 @@ import org.springframework.data.mongodb.core.index.GeoSpatialIndexType
 import org.springframework.data.mongodb.core.index.GeospatialIndex
 import org.springframework.data.mongodb.core.index.Index
 
-
 @Configuration
 class ApplicationBeans {
 
