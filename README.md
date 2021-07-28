@@ -19,13 +19,14 @@ GET	| /{id}	| Get partner by ID
 POST	| /partner	| Create partner
 
 ### Commands
-To build and start the application and MongoDB, run:
-```shell
-make run
-```
+
 To run the integration and unit tests, run:
 ```shell
 make test
+```
+To build and start the application and MongoDB, run:
+```shell
+make run
 ```
 To stop the application and MongoDB, run:
 ```shell
@@ -33,7 +34,7 @@ make down
 ```
 
 ### Swagger
-You can also check the swagger page out in the url below:
+You can also check the swagger page here:
 
 http://localhost:8081/partner/swagger-ui.html
 
